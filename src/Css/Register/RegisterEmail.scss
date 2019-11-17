@@ -1,0 +1,55 @@
+.email {
+    .email-header {
+        h1 {
+            font-size:33px;
+        }
+    }
+    .email-body {
+        margin-top:190px;
+        position: relative;
+        .email-body-input {
+            border:none;
+            border-bottom:3px solid #707070;
+            margin: 0 auto;
+            margin-bottom:15px;
+            width:75%;
+            font-size:25px;
+            outline: none;
+            padding:15px 20px;
+            &:focus {
+                border-bottom-color:#F59990;
+            }
+        }
+        .checkCode {
+            cursor: pointer;
+            border:1px solid #707070;
+            padding:15px 20px;
+            border-radius:22px;
+            background:white;
+            position: absolute;
+            right:10%;
+            z-index:2;
+            outline:none;
+            color:#707070;
+            &:hover {
+                background:#707070;
+                color:white;
+            }
+        }
+        .next-btn {
+            cursor: pointer;
+            border-radius: 53px;
+            text-decoration:none;
+            border:5px solid #F59990;
+            background:none;
+            color:#F59990;
+            margin-top:100px;
+            padding:10px 50px;
+            font-size:36px;
+            &:hover {
+                color:white;
+                background:#F59990;
+            }
+        }
+    }
+}

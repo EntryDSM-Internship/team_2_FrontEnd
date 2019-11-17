@@ -1,0 +1,82 @@
+.index {
+    .index-left {
+        width:50%;
+        float:left;
+        transition:0.5s;
+        height:100vh;
+        .index-left-header {
+            width:88%;
+            margin:0 auto;
+            position: relative;
+            top:47%;
+            transform: translate(0,-50%);
+            .index-left-header_text {
+                color:white;
+                font-size:60px;
+                line-height:1.7;
+            }    
+        }
+    }
+    .index-right {
+        transition:0.5s;
+        width:50%;
+        float:right;
+        height:100vh;
+        .index-right-header {
+            text-align:center;
+            width:75%;
+            position: relative;
+            top:20%;
+            margin:0 auto;
+            .index-btn {
+                text-decoration:none;
+                outline:none;
+                cursor: pointer;
+                font-size:40px;
+                font-weight:bolder;
+                width:65%;
+                padding:15px 0px;
+                background:#FB8276;
+                border-radius:50px;
+                display:block;   
+                margin:0 auto;
+                margin-top:20px;
+                border:5px solid #FB8276;
+            }
+            .index-register-btn {
+                color:white;
+                &:hover {
+                    color:#FB8276;
+                    background:white;
+                    border:5px solid #FB8276;
+                }
+            }
+            .index-login-btn {
+                color:#FB8276;
+                background:white;
+                &:hover {
+                    color:white;
+                    background:#FB8276;
+                    border:none;
+                }
+            }
+            .index-right-header_text {
+                font-size:60px;
+                letter-spacing:-2px;
+                padding-bottom:100px;
+            }
+        }
+    }
+}
+@media (max-width:870px) {
+    .index {
+        .index-left {
+            width:100%;
+            float:none;
+        }
+        .index-right {
+            width:100%;
+            float:none;
+        }
+    }
+}
