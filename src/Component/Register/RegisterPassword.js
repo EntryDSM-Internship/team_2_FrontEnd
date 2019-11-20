@@ -58,9 +58,9 @@ class RegisterAccount extends Component {
                         <form onSubmit={this.submit}>
                             <input name="password" onChange={this.stateChange} ref={this.input} value={this.state.password} required minLength="6" maxLength="12" placeholder="비밀번호" type="password" className="password-input" />
                             <input name="passwordCheck" onKeyUp={this.errorChange} onChange={this.stateChange} value={this.state.passwordCheck} required minLength="6" maxLength="12" placeholder="비밀번호 확인" type="password" className="password-input" /><br/>
-                            <span style={{opacity:0}} ref={this.error}>비밀번호와 비밀번호 확인이 일치하지 않습니다</span>
+                            <div style={{opacity:0}} ref={this.error}>비밀번호와 비밀번호 확인이 일치하지 않습니다</div>
                             <br/><br/><br/><br/><br/><br/><br/>
-                            <button type="submit" onClick={this.register}>회원가입</button>
+                            <button type="submit" onClick={this.register} className="next-btn">회원가입</button> 
                         </form>
                         <Link style={{display:"none"}} ref={this.nextSite} onClick={this.register} to="/register/success">회원가입</Link>
                     </div>

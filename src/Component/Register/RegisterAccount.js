@@ -14,8 +14,8 @@ class RegisterAccount extends Component {
             checkEmailOverlap:false
         }
     }
-    inputToReadOnly = createRef();
     stateChange = e => {
+        if(this.state.checkEmailOverlap) return;
         this.setState({[e.target.name] : e.target.value});
     }
     checkEmailOverlap = e => {
@@ -25,7 +25,6 @@ class RegisterAccount extends Component {
         })
         if(true) {  
             this.setState({checkEmailOverlap:true});
-            this.inputToReadOnly.current.setAttribute("readonly",true);
         } else {
             alert("중복된 이메일이 존재합니다.");
         }   
@@ -47,8 +46,8 @@ class RegisterAccount extends Component {
                     <div className="register-body">
                         <form onSubmit={this.checkEmailOverlap}>
                             <input name="name" type="text" required maxLength="5" value={this.state.name} onChange={this.stateChange} className="register-input" placeholder="성명"/><br/>
-                            <input name="nickName" type="text" required maxLength="12" value={this.state.nickName} onChange={this.stateChange} className="register-input" placeholder="닉네임"/><br/>
-                            <input ref={this.inputToReadOnly} name="email" type="email" required minLength="12" value={this.state.email} onChange={this.stateChange} className="register-input" placeholder="이메일"/>
+                            <input name="nickName" type="text" required minLength="2" maxLength="12" value={this.state.nickName} onChange={this.stateChange} className="register-input" placeholder="닉네임"/><br/>
+                            <input name="email" type="email" required minLength="12" value={this.state.email} onChange={this.stateChange} className="register-input" placeholder="이메일"/>
                             <button type="submit" className="overlap-check-btn">중복확인</button><br/>
                             <br/><br/><br/><br/><br/><br/>
                         </form>
