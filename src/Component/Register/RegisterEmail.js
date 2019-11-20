@@ -23,15 +23,13 @@ class RegisterEmail extends Component {
     goNext = e => {
         if(!this.state.emailChecked) {
             e.preventDefault();
-            alert("이메일 인증을 해주세요");
+            alert("인증코드를 확인하세요");
         }
     }
     componentWillMount(){
         if(!this.props.location.state) {
             alert("잘못된 접근 입니다."); 
             window.history.back();
-             
-             
         }
     }
     render() {
