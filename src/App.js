@@ -6,7 +6,8 @@ import RegisterAccount from './Component/Register/RegisterAccount';
 import RegisterEmail from './Component/Register/RegisterEmail';
 import RegisterPassword from './Component/Register/RegisterPassword';
 import RegisterSuccess from './Component/Register/RegisterSuccess';
-
+import Timeline from './Component/Timeline/Timeline';
+import ResetPasswordEmail from './Component/ResetPassword/ResetPasswordEmail';
 
 class App extends Component {
     render() {
@@ -17,7 +18,9 @@ class App extends Component {
                 <Route exact path="/register/email" component={RegisterEmail}/>
                 <Route exact path="/register/password" component={RegisterPassword}/>
                 <Route exact path="/register/success" component={RegisterSuccess}/>
+                <Route exact path="/resetpassword/email" component={ResetPasswordEmail}/>
                 <Route exact path="/login" component={Login}/>
+                <Route exact path="/timeline" component={Timeline}/>
             </Router>
         )
     }

@@ -40,9 +40,9 @@ class RegisterEmail extends Component {
                         <h1>이메일로 코드를 보내드렸습니다.</h1>
                     </div>
                     <div className="email-body">
-                        <input placeholder="인증번호" value={this.state.emailCheck} name="emailCheck" type="text" onChange={this.stateChange} className="email-body-input" />
-                        <button onClick={this.emailCheck} className="checkCode">확인</button><br/><br/><br/><br/><br/><br/>
-                        <Link onClick={this.goNext} className="next-btn" to={{pathname:"/register/password",state:{nickName:this.props.location.state.nickName,email:this.props.location.state.email}}}>다음</Link>
+                        <input placeholder="인증번호" value={this.state.emailCheck} name="emailCheck" type="text" onChange={this.stateChange} className="standard-input" />
+                        <button onClick={this.emailCheck} className="standard-overlap-check-btn">확인</button><br/><br/><br/><br/><br/><br/>
+                        <Link onClick={this.goNext} className="standard-next-btn" to={{pathname:"/register/password",state:{...this.props.location.state}}}>다음</Link>
                     </div>
                 </div>
             </Standard>

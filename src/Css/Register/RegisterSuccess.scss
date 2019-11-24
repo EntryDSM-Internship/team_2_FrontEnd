@@ -9,20 +9,5 @@
     }
     .btn-wrap {
         margin:50px 0;
-        .next-btn {
-            cursor: pointer;
-            border-radius: 53px;
-            text-decoration:none;
-            border:5px solid #F59990;
-            background:none;
-            color:#F59990;
-            padding:10px 30px;
-            font-size:36px;
-            &:hover {
-                color:white;
-                background:#F59990;
-            }
-        }
-    }
-    
+    }   
 }

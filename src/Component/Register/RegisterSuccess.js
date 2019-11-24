@@ -11,7 +11,8 @@ const RegisterSuccess = () => {
           <img className="congratulation" src={congratulation}/>
           <h1>축하드립니다.<br/>회원가입이 완료되었습니다.</h1>
           <div className="btn-wrap">
-            <Link to="/login" className="next-btn">로그인</Link>
+            <br/><br/> 
+            <Link to="/login" className="standard-next-btn">로그인</Link>
           </div>
         </div>
       </Standard>  

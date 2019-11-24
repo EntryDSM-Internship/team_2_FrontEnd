@@ -34,12 +34,12 @@ class Login extends Component {
     render() {
         return (
             <Standard title="로그인하기">
-                <div>
+                <div style={{marginTop:"100px"}}>
                     <form onSubmit={this.submitCheck}>
-                        <input ref={this.errorInput1} name="email" value={this.state.email} onChange={this.stateChange} type="email" required minLength="12" className="login-body-main-input" placeholder="이메일"/>
-                        <input ref={this.errorInput2} name="password" value={this.state.password} onChange={this.stateChange} type="password" required minLength="6" maxLength="12" className="login-body-main-input" placeholder="비밀번호"/>
+                        <input ref={this.errorInput1} name="email" value={this.state.email} onChange={this.stateChange} type="email" required minLength="12" className="standard-input" placeholder="이메일"/>
+                        <input ref={this.errorInput2} name="password" value={this.state.password} onChange={this.stateChange} type="password" required minLength="6" maxLength="12" className="standard-input" placeholder="비밀번호"/>
                         <div className="error_password" ref={this.errorMessage}>이메일 또는 비밀번호가 잘못 입력되었습니다.</div>
-                        <button className="login-body-main-btn" type="submit">로그인</button>
+                        <button className="standard-next-btn" type="submit">로그인</button>
                     </form>
                     <div className="login-body-help">
                         <span>비밀번호를 잊으셨나요?</span>

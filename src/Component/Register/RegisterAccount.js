@@ -45,13 +45,13 @@ class RegisterAccount extends Component {
                     </div>
                     <div className="register-body">
                         <form onSubmit={this.checkEmailOverlap}>
-                            <input name="name" type="text" required maxLength="5" value={this.state.name} onChange={this.stateChange} className="register-input" placeholder="성명"/><br/>
-                            <input name="nickName" type="text" required minLength="2" maxLength="12" value={this.state.nickName} onChange={this.stateChange} className="register-input" placeholder="닉네임"/><br/>
-                            <input name="email" type="email" required minLength="12" value={this.state.email} onChange={this.stateChange} className="register-input" placeholder="이메일"/>
-                            <button type="submit" className="overlap-check-btn">중복확인</button><br/>
+                            <input name="name" type="text" required maxLength="5" value={this.state.name} onChange={this.stateChange} className="standard-input" placeholder="성명"/><br/>
+                            <input name="nickName" type="text" required minLength="2" maxLength="12" value={this.state.nickName} onChange={this.stateChange} className="standard-input" placeholder="닉네임"/><br/>
+                            <input name="email" type="email" required minLength="12" value={this.state.email} onChange={this.stateChange} className="standard-input" placeholder="이메일"/>
+                            <button type="submit" className="standard-overlap-check-btn">중복확인</button><br/>
                             <br/><br/><br/><br/><br/><br/>
                         </form>
-                        <Link onClick={this.registerFormCheck} className="next-btn" to={{pathname:"/register/email",state:{nickName:this.state.nickName,email:this.state.email}}}>다음</Link>
+                        <Link onClick={this.registerFormCheck} className="standard-next-btn" to={{pathname:"/register/email",state:{nickName:this.state.nickName,email:this.state.email,name:this.state.name}}}>다음</Link>
                     </div>
                 </div>
             </Standard>

@@ -14,41 +14,11 @@
         font-weight:bolder;
         color:red;
     }
-    .login-body-main-input {
-        border:none;
-        border-bottom:3px solid #524a4a;
-        outline: none;
-        width:80%;
-        padding:10px 15px;
-        font-size:25px;
-        margin:0 auto; 
-        margin-top:70px;
-        display:block;
-        &:focus {
-            border-color:#FF6F61;
-        }
-    }
     .error-message-active {
         visibility:visible;
     }
     .error-input-active {
         border-color:red;
-    }
-    .login-body-main-btn {
-        margin-top:50px;
-        padding:10px 0;
-        border:5px solid #F59990;
-        width:45%;
-        background:none;
-        border-radius:50px;
-        font-size:30px;
-        color:#F59990; 
-        outline:none;
-        cursor: pointer;
-        &:hover {
-            color:white;
-            background:#F59990; 
-        }
     }
     @media (max-width:730px) {
         .login-body-main-btn {
