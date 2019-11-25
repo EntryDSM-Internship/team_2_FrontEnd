@@ -1,10 +1,9 @@
-import React,{Component,createRef} from 'react';
-import {Link} from 'react-router-dom';
-import {post} from 'axios';
+import React ,{Component,createRef} from 'react';
 import Standard from '../Reuse/Standard';
-import '../../Css/Register/RegisterPassword.scss';
+import {post} from 'axios';
+import {Link} from 'react-router-dom';
 
-class RegisterAccount extends Component {
+class ResetPasswordPassword extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -40,16 +39,15 @@ class RegisterAccount extends Component {
         const submitValue = {
             email:this.props.location.state.email,
             password:this.state.password,
-            name:this.props.location.state.name
         }
         console.log(submitValue);
         post("http://13.124.89.129/signup",submitValue);
         this.nextSite.current.click();
-        alert("회원가입에 성공하였습니다");
+        alert("비밀번호 재설정에 성공하였습니다");
     }
     render() {
         return (
-            <Standard title="회원가입하기">
+            <Standard title="비밀번호 재설정하기"> 
                 <div className="password">
                     <div className="password-header">
                         <h1>비밀번호를 생성하세요.</h1>
@@ -62,11 +60,13 @@ class RegisterAccount extends Component {
                             <br/><br/><br/><br/><br/><br/><br/>
                             <button type="submit" onClick={this.register} className="standard-next-btn">회원가입</button> 
                         </form>
-                        <Link style={{display:"none"}} ref={this.nextSite} onClick={this.register} to={{pathname:"/congratulation",state:{title:"회원가입이 완료되었습니다."}}}>회원가입</Link>
+                        <Link style={{display:"none"}} ref={this.nextSite} onClick={this.register} to={{pathname:"/congratulation",state:{title:"비밀번호 재설정이 완료되었습니다."}}}>회원가입</Link>
                     </div>
                 </div>
             </Standard>
-        );
+        )
     }
 }
-export default RegisterAccount;
+
+
+export default ResetPasswordPassword;

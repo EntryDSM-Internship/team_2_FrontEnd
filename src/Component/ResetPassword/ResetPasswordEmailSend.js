@@ -1,14 +1,18 @@
 import React,{useState} from 'react';
 
-const ResetPasswordEmailSend = ({PlusLevel}) => {
+const ResetPasswordEmailSend = ({PlusLevel,emailChange}) => {
     const [email,setEmail] = useState('');
 
     const changeValue = e => {
         setEmail(e.target.value);
     }
-    const onSubmit = () => {
+    const onSubmit = e => {
+        e.preventDefault();
         if(!email.length) return;
-        PlusLevel();
+        if(true) {
+            emailChange(email);
+            PlusLevel();
+        }
     }
     return (
         <div className="ResetPasswordEmail">
