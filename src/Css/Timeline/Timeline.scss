@@ -1,0 +1,13 @@
+.Timeline {
+    display:flex;
+    
+}
+.side-bar {
+    height:100vh;
+    width:15%;
+}
+@media(max-width:800px) {
+    .side-bar {
+        width:0%;
+    }
+}

@@ -1,0 +1,87 @@
+// .TimelineNav {
+//     position:fixed;
+//     height:150px;
+//     width:100%;
+//     background:white;
+//     border:1px solid black;
+//     & > div {
+//         margin:0 auto;
+//         width:90%;
+//         position:relative;
+//         top:50%;
+//         transform: translateY(-50%);
+//         display:flex;
+//         justify-content: space-between;
+//         & > div {
+//             flex:1;
+//         }
+//         .TimelineNav-IcoWrap {
+//             width:500px;
+//             flex:5;
+//             display:flex;
+//             justify-content: space-between;
+//             & > svg {
+//                 vertical-align:middle;
+//             }
+//         }
+//         .TimelineNav-profile {
+//             width:80px;
+//             height:80px;
+//             background:black;
+//             border-radius:50px;
+//         }
+//         .TimelineNav-right {
+//             .standard-next-btn {
+//                 float:right;
+//                 font-size:20px;
+//                 width:150px;
+//                 padding:10px 30px;
+//             }
+//             // @media (max-width:800px) {
+//             //     .standard-next-btn {
+//             //         padding:0;
+//             //     }
+//             // }
+//         }
+//     }
+    
+// }
+
+.TimelineNav {
+    margin:0 auto;
+    width:100%;
+    border:1px solid black;
+    height:160px;
+    & > div{
+        margin:0 auto;
+        width:80%;
+        display:flex;
+        transform: translateY(50%);
+        svg {
+            border-bottom:1px solid #707070;
+            visibility:middle;
+        }
+        & > div {
+            text-align:center;
+        }
+        .TimelineNav-left {
+            width:400px;
+            flex:0.5
+        }
+        .TimelineNav-IcoWrap {
+            transform: translateY(10px);
+            display:flex;
+            justify-content: space-between;
+            flex:1;
+        }
+        .TimelineNav-right {
+            width:400px;
+            flex:0.5;
+            button {
+                font-size:15px;
+                float:right;
+            }
+        }
+    }
+    
+}

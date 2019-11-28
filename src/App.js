@@ -22,7 +22,7 @@ class App extends Component {
                 <Route exact path="/resetpassword/email" component={ResetPasswordEmail}/>
                 <Route exact path="/resetpassword/password" component={ResetPasswordPassword}/>
                 <Route exact path="/login" component={Login}/>
-                <Route exact path="/timeline" component={Timeline}/>
+                <Route exact path="/home" component={Timeline}/>
             </Router>
         )
     }
