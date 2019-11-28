@@ -1,4 +1,9 @@
 import React,{Component} from 'react';
+import LeftBar from '../Reuse/Leftbar';
+import RightBar from '../Reuse/Rightbar';
+import TimelineNav from './TimelineNav';
+import TimelineMain from './TimelineMain';
+import '../../Css/Timeline/Timeline.scss';
 
 class Timeline extends Component {
     constructor(props) {
@@ -8,9 +13,14 @@ class Timeline extends Component {
 
     render() {
         return (
-            <div className="Timeline">
-                
-            </div>
+            <>
+                <TimelineNav/>
+                <div className="Timeline">
+                    <LeftBar/>
+                    <TimelineMain/>
+                    <RightBar/>
+                </div>
+            </>
         );
     }
 }
